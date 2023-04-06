@@ -1,9 +1,5 @@
 function App() {
-  return (
-    <div className="App">
-      WebElArt gallery soon will be here. :)
-    </div>
-  )
+  return <div className="App">Gallery soon will be here.</div>;
 }
 
-export default App
+export default App;
