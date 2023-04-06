@@ -1,4 +1,11 @@
-.test {
-    font-size: 2rem;
-    font-weight: bold;
+.gallery {
+    user-select: none;
+
+    &__container {
+        margin-bottom: 5px;
+    }
+
+    &__preview {
+        margin: 0 auto;
+    }
 }

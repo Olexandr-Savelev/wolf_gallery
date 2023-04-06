@@ -1,0 +1,30 @@
+.mainPicture {
+    border-radius: 5px;
+    background-color: #aaaaaa;
+    position: relative;
+    padding-bottom: 50%;
+    overflow: hidden;
+
+    &Img {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        z-index: 2;
+
+        &Prev,
+        &Next {
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            z-index: 1;
+        }
+    }
+}

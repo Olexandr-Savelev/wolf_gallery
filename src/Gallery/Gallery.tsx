@@ -6,11 +6,11 @@ import Preview from "./Preview/Preview";
 import Navigation from "./Navigation/Navigation";
 
 const Gallery: FC<GalleryProps> = ({ pictures }) => {
-  const [indexActivePicture, setIndexActivePicture] = useState<number>(0);
+  const [activePictureIndex, setactivePictureIndex] = useState<number>(0);
 
-  const activePicture = pictures[indexActivePicture];
-  const prevPicture = pictures[indexActivePicture - 1];
-  const nextPicture = pictures[indexActivePicture + 1];
+  const activePicture = pictures[activePictureIndex];
+  const prevPicture = pictures[activePictureIndex - 1];
+  const nextPicture = pictures[activePictureIndex + 1];
 
   if (pictures.length === 0) return null;
   return (
@@ -27,18 +27,17 @@ const Gallery: FC<GalleryProps> = ({ pictures }) => {
           disableNextPicture={!nextPicture}
           disablePrevPicture={!prevPicture}
           onNextPicture={() => {
-            setIndexActivePicture(indexActivePicture + 1);
+            setactivePictureIndex(activePictureIndex + 1);
           }}
           onPrevPicture={() => {
-            setIndexActivePicture(indexActivePicture - 1);
+            setactivePictureIndex(activePictureIndex - 1);
           }}
         />
       </div>
       <Preview
         className={styles.gallery__preview}
-        activePicture={activePicture}
-        prevPicture={prevPicture}
-        nextPicture={nextPicture}
+        pictures={pictures}
+        activePictureIndex={activePictureIndex}
       />
     </div>
   );

@@ -16,7 +16,11 @@ export interface MainPictureProps {
   nextPicture?: Picture;
 }
 
-export interface PreviewProps extends MainPictureProps {}
+export interface PreviewProps {
+  className: string;
+  pictures: Picture[];
+  activePictureIndex: number;
+}
 
 export interface NavigationProps {
   className: string;
